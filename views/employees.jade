@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Employee Management
+
+  table#employeeTable.table.table-bordered.table-striped
+    thead
+      tr
+        th ID
+        th Name
+        th Status
+
+    tbody
+      each employee in employees
+        tr
+          td= employee.id
+          td= employee.name
+          td= employee.isActive ? 'Active' : 'Inactive'
